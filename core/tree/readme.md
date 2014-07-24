@@ -1,1 +1,0 @@
-A simple tools for viewing the structure of a file system.
