@@ -1,26 +1,24 @@
 # Kitout
 
-A transparent and well-documented setup procedure for workstations.
-
-This procedure requires some manual steps to setup the workstation. The goal of
-**Kitout** is to automate the setup process. Please file an issue if you know
-how a currently manual step could be automated.
+Describe the configuration of a Mac OS workstation as a set of small shell scripts, then use
+kitout to run those scripts and ensure the machine's configuration matches its description.
 
 ## Prerequsites
 
-A clean install of OS X 10.9 (Mavericks).
+A clean install of the latest version of OS X (10.10 Yosemite). At this time no effort is made to
+support previous versions.
 
 ## Kitout a Workstation
 
-Install kitout
+Install:
 
+    # Create the directory where kitout will live
     sudo mkdir -p /usr/local/opt
-    # Changes the ownership of /usr/local to your user (not root)
+    # Ensure non-root user can read/write everything in /usr/local
     sudo chown -R $USER /usr/local
-    cd /usr/local/opt
-    # Install git if prompted by the system
-    git clone https://github.com/kitout/core.git
-    cd kitout
+    # Download kitout, the system may prompt you to install git
+    git clone https://github.com/kitout/core.git /usr/local/opt/kitout
+    cd /usr/local/opt/kitout
 
 Then run it
 
