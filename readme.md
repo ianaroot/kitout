@@ -42,6 +42,10 @@ Then clone `kitout/core` and `kitout/units-developer`:
     git clone https://github.com/kitout/core.git
     git clone https://github.com/kitout/units-developer.git
 
+Then symlink kitout:
+
+    ln -s ~/Projects/kitout /usr/local/opt/kitout
+
 Whether you're working on `kitout/kitout`, `kitout/core` or `kitout/units-developer` always work
 from a branch and use the github pull request workflow for contributing.
 
