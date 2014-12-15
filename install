@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+kitout_path=/usr/local/opt/kitout
+
+# todo:
+# clone/update kitout/core
+# clone/update kitout/units-developer
+# mkdir /usr/local/opt/kitout/units-local
+# symlink /usr/local/opt/kitout/core/kitout -> /usr/local/bin/kitout
