@@ -1,1 +1,0 @@
-Great offline documentation viewer.
