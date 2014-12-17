@@ -27,7 +27,7 @@ Install:
 
 Uninstall
 
-    rm -rf /usr/local/opt/kitout /usr/local/bin/kitout
+    rm -rf /usr/local/opt/kitout /usr/local/bin/kitout*
 
 ## Developing Kitout
 
@@ -53,7 +53,7 @@ from a branch and use the github pull request workflow for contributing.
 
 To create a new unit, run:
 
-    /usr/local/opt/kitout/core/kitout-install-unit local my-unit
+    kitout-create-unit local my-unit
 
 The appropriate unit files will be generated for you and you'll be dropped into `/usr/local/opt/kitout/units-local/my-unit`.
 
@@ -66,9 +66,11 @@ Units have four files (that kitout cares about):
 
 To install a unit run:
 
-    /usr/local/opt/kitout/core/kitout-install-unit my-unit
+    kitout-install-unit my-unit
 
-The `/usr/local/bin/kitout` executable runs `kitout-install-unit` for every unit listed in the `/usr/local/opt/kitout/units` text file.
+To install all units `/usr/local/opt/kitout/config/units` just run:
+
+    kitout
 
 ## The Way of Kitout
 
@@ -96,7 +98,9 @@ point or inspiration for building your own system.
 
 Kitout is written in bash.
 
-Always use [`#!/usr/bin/env bash`](http://en.wikipedia.org/wiki/Shebang_(Unix)#Portability) as the shebang.
+Every source file [ends with a blank line](http://unix.stackexchange.com/questions/18743/whats-the-point-in-adding-a-new-line-to-the-end-of-a-file).
+
+Use [`#!/usr/bin/env bash`](http://en.wikipedia.org/wiki/Shebang_(Unix)#Portability) as the shebang.
 
 Each script should begin with the ["unoffical bash strict mode"](http://redsymbol.net/articles/unofficial-bash-strict-mode/): `set -euo pipefail ; IFS=$'\n\t'`
 
