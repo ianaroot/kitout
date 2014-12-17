@@ -2,11 +2,47 @@
 
 kitout_path=/usr/local/opt/kitout
 
-# todo:
-# clone/update kitout/core
-# clone/update kitout/units-developer
-# mkdir /usr/local/opt/kitout/units-local
+config_repo_url=$1
 
+# ---
+
+[[ $# = 1 ]] || {
+  echo "Specify the config repo url" >&2
+  echo "e.g. $0 https://github.com/my-org/kitout-config"  >&2
+  exit 1
+}
+
+# ---
+
+function clone-or-pull {
+  local repo_url=$1
+  local repo_name=$2
+  [[ $repo_name ]] || repo_name=$(basename $repo_url)
+  repo_path=$kitout_path/$repo_name
+
+  if [[ -d $repo_path ]]; then
+    (cd $repo_path && git pull --rebase)
+  else
+    (cd $kitout_path && git clone $repo_url $repo_name)
+  fi
+}
+
+# ---
+
+clone-or-pull https://github.com/kitout/core.git
+
+# ---
+
+config_repo_url=$1
+clone-or-pull $config_repo_url
+
+# ---
+
+mkdir -p $kitout_path/units-local
+
+# ---
+
+# Link executables
 while read path ; do
   ln -sf $path /usr/local/bin
 done < <(ls $kitout_path/core/kitout*)
