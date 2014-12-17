@@ -55,7 +55,7 @@ To create a new unit, run:
 
     kitout-create-unit local my-unit
 
-The appropriate unit files will be generated for you and you'll be dropped into `/usr/local/opt/kitout/units-local/my-unit`.
+The appropriate unit files will be generated for you at `/usr/local/opt/kitout/units-local/my-unit`.
 
 Units have four files (that kitout cares about):
 
