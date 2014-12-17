@@ -91,3 +91,21 @@ point or inspiration for building your own system.
 [babushka]: http://babushka.me
 [chef]: http://www.opscode.com/chef
 [puppet]: http://puppetlabs.com
+
+## Contributing Notes
+
+Kitout is written in bash.
+
+Always use [`#!/usr/bin/env bash`](http://en.wikipedia.org/wiki/Shebang_(Unix)#Portability) as the shebang.
+
+Each script should begin with the ["unoffical bash strict mode"](http://redsymbol.net/articles/unofficial-bash-strict-mode/): `set -euo pipefail ; IFS=$'\n\t'`
+
+Some scripts will need to know their expanded, non-symlink path. To retreive that use:
+
+```
+realpath="$(python -c 'import os,sys; print os.path.realpath(sys.argv[1])' "$0")"
+```
+
+Yes. Its a hideous hack.
+
+Alias numeric arguments like `$1` to names that describe their contents like `$unit_name`.
