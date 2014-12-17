@@ -7,5 +7,6 @@ kitout_path=/usr/local/opt/kitout
 # clone/update kitout/units-developer
 # mkdir /usr/local/opt/kitout/units-local
 
-# Create symlink to dir that is present in OSX's PATH by default
-ln -sf $kitout_path/core/kitout /usr/local/bin/kitout
+while read path ; do
+  ln -sf $path /usr/local/bin
+done < <(ls $kitout_path/core/kitout*)
