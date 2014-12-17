@@ -29,7 +29,7 @@ function clone-or-pull {
 
 # ---
 
-clone-or-pull https://github.com/kitout/core.git
+clone-or-pull https://github.com/kitout/core
 
 # ---
 

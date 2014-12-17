@@ -23,7 +23,7 @@ Install:
     git clone https://github.com/kitout/kitout.git /usr/local/opt/kitout
     cd /usr/local/opt/kitout
     # Run the installer
-     ./install https://github.com/USER-OR-ORG/KITOUT-CONFIG-REPO.git
+     ./install https://github.com/USER-OR-ORG/KITOUT-CONFIG-REPO
 
 Uninstall
 
