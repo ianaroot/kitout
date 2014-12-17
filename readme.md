@@ -110,6 +110,7 @@ Some scripts will need to know their expanded, non-symlink path. To retreive tha
 realpath="$(python -c 'import os,sys; print os.path.realpath(sys.argv[1])' "$0")"
 ```
 
-Yes. Its a hideous hack.
+(Yes. Its a hideous hack.)
 
-Alias numeric arguments like `$1` to names that describe their contents like `$unit_name`.
+Alias numeric arguments like `$1` to names that describe their contents like `$unit_name`. It's ok
+to use $0.
