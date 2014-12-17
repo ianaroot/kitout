@@ -22,9 +22,8 @@ Install:
     # Download kitout, the system may prompt you to install git
     git clone https://github.com/kitout/kitout.git /usr/local/opt/kitout
     cd /usr/local/opt/kitout
-    # Clone your kitout config to 'config'
     # Run the installer
-     ./install
+     ./install https://github.com/USER-OR-ORG/KITOUT-CONFIG-REPO.git
 
 Uninstall
 
