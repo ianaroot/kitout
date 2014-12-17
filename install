@@ -42,6 +42,9 @@ mkdir -p $kitout_path/units-local
 
 # ---
 
+# Ensure this exists
+mkdir -p /usr/local/bin
+
 # Link executables
 while read path ; do
   ln -sf $path /usr/local/bin
