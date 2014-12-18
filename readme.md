@@ -31,23 +31,17 @@ Uninstall
 
 ## Developing Kitout
 
-First delete `/usr/local/opt/kitout`. Now clone `kitout/kitout` somewhere:
+Install kitout as above, then move `/usr/local/opt/kitout` somewhere:
 
     cd ~/Projects
-    git clone https://github.com/kitout/kitout.git
-
-Then clone `kitout/core` and `kitout/units-developer`:
-
-    cd kitout
-    git clone https://github.com/kitout/core.git
-    git clone https://github.com/kitout/units-developer.git
+    mv /usr/local/opt/kitout .
 
 Then symlink kitout:
 
     ln -s ~/Projects/kitout /usr/local/opt/kitout
 
-Whether you're working on `kitout/kitout`, `kitout/core` or `kitout/units-developer` always work
-from a branch and use the github pull request workflow for contributing.
+The `/`, `/core`, `/units-*` and `/config` folders in kitout are already their own git repos. If
+you're working on a fork then you'll need to update the appropriate remotes to point to your forks.
 
 ## Writing Units
 
@@ -83,9 +77,9 @@ There are no conferences about Kitout. There are no consultancies that offer Kit
 Kitout is designed to be a simple tool for people in the software education space to quickly set
 up new workstations. It is not the right tool for many, many other use cases.
 
-The authors of kitout currently have one or two hours a month available to maintain it. So if you
-want to do some Serious Business with kitout the right move is probably to use it as a starting
-point or inspiration for building your own system.
+The authors of kitout currently have 1-2 hours a month available to maintain it. So if you
+want to do some Serious Business with kitout, the right move is probably to use it as a _starting
+point_ or inspiration for building your own system.
 
 [boxen]: http://boxen.github.com
 [sprout-wrap]: https://github.com/pivotal-sprout/sprout-wrap
